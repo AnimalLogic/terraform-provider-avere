@@ -46,6 +46,8 @@ $ cd $GOPATH/src/github.com/terraform-providers/terraform-provider-avere
 $ make build
 ```
 
+Copy the resulting binary to `~yourhome/.terraform.d/plugins/terraform-provider-avere`.
+
 Using the provider
 ----------------------
 The options of the `avere_cluster` resource are equivalent to the deployment options of the [Azure vFXT.py Script](https://github.com/Azure/AvereSDK/blob/master/docs/using_vfxt_py.md). See that repository for details on acceptable input values.
