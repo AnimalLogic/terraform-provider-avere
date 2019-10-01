@@ -96,6 +96,8 @@ func resourceCluster() *schema.Resource {
 // The following four methods are used by Terraform to capture and control resource state.
 func resourceClusterCreate(d *schema.ResourceData, m interface{}) error {
 	runVFXTClusterCreateScript(d, m)
+	masterIP := d.Get("management_address").(string)
+	d.SetId(masterIP)
 
 	return resourceClusterRead(d, m)
 }
